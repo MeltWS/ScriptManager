@@ -1,4 +1,4 @@
-local name = "Anywhere Farmer"
+local name = "Anywhere Farmer Victory Road Hoenn"
 local author = "MeltWS"
 
 local description = [[Money Farm Victory Road Hoenn]]

@@ -1,4 +1,4 @@
-local name = "Anywhere Farmer"
+local name = "Anywhere Farmer Dragons Den"
 local author = "MeltWS"
 
 local description = [[Money Farm DD]]
