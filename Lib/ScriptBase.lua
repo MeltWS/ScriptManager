@@ -68,7 +68,7 @@ function ScriptBase:battle()
     if not self.inBattle then
         self.inBattle = true
     end
-    return self.onBattleAction()
+    return self:onBattleAction()
 end
 
 function ScriptBase:onBattleAction()

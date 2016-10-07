@@ -4,7 +4,7 @@ local author = "MeltWS"
 local description = [[Money Farm Victory Road Hoenn]]
 
 local pf           = require "ProshinePathfinder/Pathfinder/Maps_Pathfind" -- requesting table with methods
-local ScriptBase   = require "Scripts/MSLBase"
+local ScriptBase   = require "Lib/ScriptBase"
 local farmMap      = "Victory Road Hoenn 1F"
 local holdItem     = "Leftovers" -- support giving an item to the leader, if you don't want to give one, set to nil.
 local farmMethod   = function() return moveToRectangle(4,37,22,41) end

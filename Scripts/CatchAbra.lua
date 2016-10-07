@@ -68,7 +68,7 @@ local description = "Hunting at " .. location .. "."
 
 --Start Of Script--
 
-local ScriptBase   = require "Scripts/MSLBase"
+local ScriptBase   = require "Lib/ScriptBase"
 local pf           = require "ProshinePathfinder/Pathfinder/Maps_Pathfind" -- requesting table with methods
 local lib          = require "ProshinePathfinder/PathFinder/Lib/lib"
 
