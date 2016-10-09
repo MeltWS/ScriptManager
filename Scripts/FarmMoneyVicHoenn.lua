@@ -76,7 +76,9 @@ function FarmMoneyVicHoenn:onPathAction()
 end
 
 function FarmMoneyVicHoenn:onBattleAction()
-    if getPokemonHealth(1) > 0 and getMapName() == farmMap then
+    if isOpponentShiny() then
+        return useItem("Ultra Ball") or useItem("Great Ball") or useItem("Pokeball") or attack() or run() or sendUsablePokemon() or sendAnyPokemon() or useAnyMove()
+    elseif getPokemonHealth(1) > 0 and getMapName() == farmMap then
         return attack() or run() or sendUsablePokemon() or sendAnyPokemon() or useAnyMove()
     else return run() or attack() or sendUsablePokemon() or sendAnyPokemon() or useAnyMove()
     end

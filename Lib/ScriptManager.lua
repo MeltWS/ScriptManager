@@ -63,20 +63,22 @@ function ScriptManager:isScriptOver()
 end
 
 function ScriptManager:isCycleTime()
-    if not self.cycle then
-        return false
-    end
-    self.currentHour = getTime()
-    if self.lastCycleHour ~= self.currentHour then
-        self.newDay = true
-    elseif self.newDay then
-        self.daysToLive = self.daysToLive - 1
-        self.newDay = false
-        if self.daysToLive == 0 then
-            log("Manager ➜ time to cycle")
+    if self.daysToLive then
+        self.currentHour = getTime()
+        if self.lastCycleHour ~= self.currentHour then
+            self.newDay = true
+        elseif self.newDay then
+            self.daysToLive = self.daysToLive - 1
+            self.newDay = false
+            if self.daysToLive == 0 then
+                log("Manager ➜ time to cycle")
+                self.daysToLive = Settings.Cycle
+                self.lastCycleHour = self.currentHour
+                return true
+            end
         end
     end
-    return (self.daysToLive == 0)
+    return false
 end
 
 function ScriptManager:updateScript()
