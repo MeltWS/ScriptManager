@@ -43,15 +43,15 @@ end
 --     end
 -- end
 
--- -- isJust : Maybe a -> Bool
--- local function isJust(x)
---     return x ~= nil
--- end
+-- isJust : Maybe a -> Bool
+local function isJust(x)
+    return x ~= nil
+end
 
--- -- isNothing : Maybe a -> Bool
--- local function isNothing(x)
---     return x == nil
--- end
+-- isNothing : Maybe a -> Bool
+local function isNothing(x)
+    return x == nil
+end
 
 -- -- fromMaybe : a -> Maybe a -> a
 -- local function fromMaybe(default)
@@ -138,8 +138,8 @@ return {
 --     maybeBind = maybeBind,
 --     maybeApply = maybeApply,
 --     maybe = maybe,
---     isJust = isJust,
---     isNothing = isNothing,
+    isJust = isJust,
+    isNothing = isNothing,
 --     fromMaybe = fromMaybe,
 --     arrayToMaybe = arrayToMaybe,
 --     maybeToArray = maybeToArray,
