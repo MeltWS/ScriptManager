@@ -3,7 +3,9 @@
 -- Mode : The script manager handles two modes Random or Priority
 -- Random means a script is taken randomly from the script doable.
 -- Priority means the Manager tries to load the higher value first.
-local Mode    = Random
+-- In Priority if two script have the same priority value, one will be picked randomly.
+-- local Mode    = "Priority"
+local Mode    = "Random"
 
 -- Cycle : the time before the manager randomise another script.
 -- time scale is in game days, one in game day is ~2h30, so setting the cycle to one will randomise a script every 2h30.

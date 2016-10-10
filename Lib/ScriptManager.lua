@@ -8,9 +8,7 @@ local ScriptManager = {}
 local Scripts = {}
 for name, weight in pairs(Settings.Scripts) do -- load every Script
     local script = require("Scripts/" .. tostring(name))
-    for i = 1, weight do
-        table.insert(Scripts, script:new())
-    end
+    Scripts[script:new()] = weight
 end
 
 function ScriptManager:new(o)
@@ -24,7 +22,7 @@ function ScriptManager:new(o)
         o.lastCycleHour  = getTime()
         o.currentHour    = getTime()
         o.newDay         = false
-        o.idSelected     = nil
+        o.lastSelected   = nil
         o.selected       = nil
         o.isOver         = false
     end
@@ -38,25 +36,57 @@ function ScriptManager:message()
     return nil
 end
 
-function ScriptManager:getDoable()
-    local tDoable = nil
-    for i, script in ipairs(self.scripts) do
-        if script:isDoable() and self.idSelected ~= i then
+function ScriptManager:getDoableRandom()
+    local tDoable  = nil
+    for script, weight in pairs(self.scripts) do
+        if script:isDoable() then
             tDoable = tDoable or {}
-            table.insert(tDoable, i)
+            if self.lastSelected == script then
+                weight = weight - 1
+            end
+            for i = 1, weight do
+                table.insert(tDoable, script)
+            end
+        end
+    end
+    return tDoable
+end
+
+function ScriptManager:getDoablePriority()
+    local tDoable  = nil
+    local mPrio = 0
+    for script, sPrio in pairs(self.scripts) do
+        if script:isDoable() then
+            tDoable = tDoable or {}
+            if sPrio >= mPrio then
+                if sPrio > mPrio then
+                    tDoable = {}
+                    mPrio = sPrio
+                end
+                table.insert(tDoable, script)
+            end
         end
     end
     return tDoable
 end
 
 function ScriptManager:next()
-    self.idSelected = Maybe.maybeMap(function(td) return td[math.random(#td)] end)(self:getDoable())
-    self.selected   = self.scripts[self.idSelected]
+    local td
+    if self.mode == "Priority" then
+        td = self:getDoablePriority()
+    else
+        td = self:getDoableRandom()
+    end
+    self.selected = Maybe.maybeMap(function(td) return td[math.random(#td)] end)(td) -- get random script doable
+    self.lastSelected = self.selected
     return self.selected
 end
 
 function ScriptManager:isScriptOver()
-    if not self.selected or self.selected:isDone() then
+    if not self.selected then
+        return true
+    elseif self.selected:isDone() then
+        log("Manager ➜ " .. self.selected.name .. " is over")
         return true
     end
     return false
@@ -83,14 +113,15 @@ end
 
 function ScriptManager:updateScript()
     if self:isScriptOver() or self:isCycleTime() then
-        if self.selected then
-            log(self.selected.name .. " is over")
+        if self.selected and self.selected:onStop() then
+            self.selected = nil
+            return false
         end
         if not self:next() then
             self.isOver = true
             return false
         end
-        log('Starting new random script ➜ ' .. self.selected:message())
+        log('Starting new ' .. self.mode .. ' script ➜ ' .. self.selected:message())
         return not self.selected:onStart() -- do not updateScript if onStart perform an action (true)
     end
     return true
