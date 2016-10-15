@@ -14,12 +14,12 @@ local Cycle   = 1
 
 local Scripts = {
     --  Here you put your scripts
-    --  FileName   = Weight ( How many chances this script has to be loaded )
+    --  FileName   = Weight ( How many chances this script has to be loaded, or his Priority )
     -- CatchAbra = 1,
-    -- FarmMoneyDD = 1,
-    -- FarmMoneyVicHoenn = 1,
-    ThiefQuest = 2,
-    SubwayQuest = 1,
+    FarmMoneyDD = 1,
+    FarmMoneyVicHoenn = 1,
+    -- ThiefQuest = 1,
+    -- SubwayQuest = 2,
 }
 
 local Settings = {}
