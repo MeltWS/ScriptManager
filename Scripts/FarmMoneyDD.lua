@@ -42,10 +42,10 @@ local function hasUsableDamageMove(pokemonID)
 end
 
 local function swapLeaderWithUsablePokemon()
-    for i = 1, getTeamSize() do
+    for i = 2, getTeamSize(), 1 do
         if getPokemonHealth(i) > 0 and hasUsableDamageMove(i) then
             if not getPokemonHeldItem(1) then
-                return assert(swapPokemonWithLeader(getPokemonName(i)), "Failed to swap Pokemon ".. i .."  with leader.")
+                return assert(swapPokemon(1, i), "Failed to swap Pokemon ".. i .."  with leader.")
             else return assert(takeItemFromPokemon(1), "Failed to retrieve item from leader")
             end
         end
@@ -75,9 +75,13 @@ function FarmMoneyDD:onPathAction()
     end
 end
 
+local function useAnyBall()
+    return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")
+end
+
 function FarmMoneyDD:onBattleAction()
-    if isOpponentShiny() then
-        return useItem("Ultra Ball") or useItem("Great Ball") or useItem("Pokeball") or attack() or run() or sendUsablePokemon() or sendAnyPokemon() or useAnyMove()
+    if isOpponentShiny() or not isAlreadyCaught() then
+        return useAnyBall() or attack() or run() or sendUsablePokemon() or sendAnyPokemon()
     elseif getPokemonHealth(1) > 0 and getMapName() == farmMap then
         return attack() or run() or sendUsablePokemon() or sendAnyPokemon() or useAnyMove()
     else return run() or attack() or sendUsablePokemon() or sendAnyPokemon() or useAnyMove()

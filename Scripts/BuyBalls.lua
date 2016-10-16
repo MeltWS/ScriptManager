@@ -55,4 +55,15 @@ function BuyBalls:onDialogMessage(message)
     end
 end
 
+local function useAnyBall()
+    return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")
+end
+
+function BuyBalls:onBattle()
+    if isOpponentShiny() or not isAlreadyCaught() then
+        return useAnyBall() or run() or attack() or sendUsablePokemon() or sendAnyPokemon()
+    end
+    return run() or attack() or sendUsablePokemon() or sendAnyPokemon()
+end
+
 return BuyBalls
