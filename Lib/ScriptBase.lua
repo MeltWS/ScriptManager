@@ -72,7 +72,7 @@ function ScriptBase:battle()
 end
 
 function ScriptBase:onBattleAction()
-    return run()
+    return run() or attack() or sendAnyPokemon()
 end
 
 function ScriptBase:onDialogMessage(message)

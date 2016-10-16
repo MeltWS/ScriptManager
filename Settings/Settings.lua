@@ -20,6 +20,7 @@ local Scripts = {
     FarmMoneyVicHoenn = 1,
     -- ThiefQuest = 1,
     -- SubwayQuest = 2,
+    BuyBalls = 5
 }
 
 local Settings = {}
