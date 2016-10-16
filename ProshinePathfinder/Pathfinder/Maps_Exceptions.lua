@@ -218,6 +218,9 @@ DescMaps["Seafoam B1F_to_Cinnabar Island"] = {function() Mode_MoveToCell("Seafoa
 DescMaps["Seafoam B1F_to_Route 19"] = {function() Mode_MoveToCell("Seafoam B1F", 15,9,86,28,15,12) end}
 DescMaps["Seafoam 1F_to_Cinnabar Island"] = {function() Mode_MoveToCell("Seafoam 1F", 64,7,78,16,71,15) end,function() Mode_MoveToCell("Seafoam 1F", 7,7,20,16,20,8) end}
 DescMaps["Seafoam 1F_to_Route 19"] = {function() Mode_MoveToCell("Seafoam 1F", 6,6,20,16,13,16) end,function() Mode_MoveToCell("Seafoam 1F", 64,7,77,15,64,8) end}
+DescMaps["Seafoam B1F_to_Seafoam B2F"] = {function() Mode_MoveToCell("Seafoam B1F", 14,8,88,30,64,25) end}
+DescMaps["Seafoam B2F_to_Seafoam B3F"] = {function() Mode_MoveToCell("Seafoam B2F", 9,7,69,34,63,19) end}
+DescMaps["Seafoam B3F_to_Seafoam B4F"] = {function() Mode_MoveToCell("Seafoam B3F", 7,4,69,33,57,26) end}
 
 -- ROUTE 9 ,ROUTE 10 AND ROCKTUNNEL 1,2
 DescMaps["Route 9_to_Lavender Town"] = {function() Mode_MoveToCell("Route 9", 0,0,100,100,86,33) end}
@@ -271,6 +274,17 @@ DescMaps["Route 18_to_Fuchsia City"] = {function() Mode_MoveToCell("Route 18", 1
 DescMaps["Player House Pallet_to_Pallet Town"] = {function() Mode_MoveToCell("Player House Pallet", 0,0,13,10,4,10) end}
 DescMaps["Pallet Town_to_Player House Pallet"] = {function() Mode_MoveToCell("Pallet Town", 3,0,28,30,6,12) end}
 
+--MT. SILVER
+DescMaps["Mt. Silver 1F_to_Mt. Silver 2F"] = {function() Mode_MoveToCell("Mt. Silver 1F", 41,46,57,63,56,47) end, function() Mode_MoveToCell("Mt. Silver 1F", 35,15,58,44,36,16) end}
+DescMaps["Mt. Silver Lower Mountainside_to_Mt. Silver 1F"] = {function() Mode_MoveToCell("Mt. Silver Lower Mountainside", 11,6,24,42,18,28) end}
+DescMaps["Mt. Silver 2F_to_Mt. Silver Upper Mountainside"] = {function() Mode_MoveToCell("Mt. Silver 2F", 16,13,46,46,32,14) end, function() Mode_MoveToCell("Mt. Silver 2F", 48,31,52,47,51,45) end}
+DescMaps["Mt. Silver Upper Mountainside_to_Mt. Silver 3F"] = {function() Mode_MoveToCell("Mt. Silver Upper Mountainside", 22,22,41,44,39,43) end, function() Mode_MoveToCell("Mt. Silver Upper Mountainside", 9,48,41,63,14,49) end}
+DescMaps["Mt. Silver Upper Mountainside_to_Mt. Silver 2F"] = {function() Mode_MoveToCell("Mt. Silver Upper Mountainside", 9,48,41,63,39,56) end, function() Mode_MoveToCell("Mt. Silver Upper Mountainside", 22,22,41,44,22,25) end}
+DescMaps["Mt. Silver 2F_to_Mt. Silver 1F"] = {function() Mode_MoveToCell("Mt. Silver 2F", 48,31,52,47,51,32) end, function() Mode_MoveToCell("Mt. Silver 2F", 16,13,46,46,32,35) end}
+DescMaps["Mt. Silver 1F_to_Mt. Silver Exterior"] = {function() Mode_MoveToCell("Mt. Silver 1F", 42,46,57,64,45,63) end, function() Mode_MoveToCell("Mt. Silver 1F", 41,41,59,46,58,43) end, function() Mode_MoveToCell("Mt. Silver 1F", 16,15,41,53,58,43) end}
+DescMaps["Mt. Silver Lower Mountainside_to_Mt. Silver Exterior"] = {function() Mode_MoveToCell("Mt. Silver Lower Mountainside", 11,6,24,42,22,34) end}
+DescMaps["Mt. Silver 1F_to_Mt. Silver Expert Belt"] = {function() Mode_MoveToCell("Mt. Silver 1F", 41,46,57,63,56,47) end, function() Mode_MoveToCell("Mt. Silver 1F", 16,15,41,53,40,48) end, function() Mode_MoveToCell("Mt. Silver 1F", 41,41,59,46,40,48) end}
+
 
 -- SPEAK WITH NPC --
 -- SAFARI KANTO ALL MAPS
@@ -322,7 +336,7 @@ DescMaps["Mt. Mortar Lower Cave_to_Mahogany Town"] = {function() Mode_MoveToCell
 
 --Route 47 to Cliff Edge Gate or Route 48 or Cliff Cave B1F
 DescMaps["Route 47_to_Cliff Edge Gate"] = {function() Mode_MoveToCell("Route 47", 65,72,93,80,89,74) end, function() Mode_MoveToCell("Route 47", 76,81,84,83,89,74) end, function() Mode_MoveToCell("Route 47", 55,74,64,76,89,74) end, function() Mode_MoveToCell("Route 47", 41,72,54,81,89,74) end--[[Between Cliff Cave 1F and Cliff Edge]], function() if isSurfing() then Mode_MoveToCell("Route 47", 19,63,98,95,67,83) end end, function() Mode_MoveToCell("Route 47", 65,84,68,86,67,83) end--[[Water route 47 Downside]], function() Mode_MoveToCell("Route 47", 41,66,70,68,69,65) end, function() Mode_MoveToCell("Route 47", 41,69,41,72,69,65) end, function() Mode_MoveToCell("Route 47", 12,73,41,75,69,65) end, function() Mode_MoveToCell("Route 47", 12,60,15,72,69,65) end, function() Mode_MoveToCell("Route 47", 6,0,38,59,69,65) end--[[Between Cliff Cave 2F and Route 48]]}
-DescMaps["Route 47_to_Route 48"] = {function() Mode_MoveToCell("Route 47", 65,72,93,80,68,71) end, function() Mode_MoveToCell("Route 47", 76,81,84,83,68,71) end, function() Mode_MoveToCell("Route 47", 55,74,64,76,68,71) end, function() Mode_MoveToCell("Route 47", 41,72,54,81,68,71) end--[[Between Cliff Cave 1F and Cliff Edge]], function() if isSurfing() then Mode_MoveToCell("Route 47", 19,63,98,95,67,83) end end, function() Mode_MoveToCell("Route 47", 65,84,68,86,67,83) end--[[Water route 47 Downside]], function() Mode_MoveToCell("Route 47", 41,68,70,68,33,0) end, function() Mode_MoveToCell("Route 47", 41,69,41,72,33,0) end, function() Mode_MoveToCell("Route 47", 12,73,41,75,33,0) end, function() Mode_MoveToCell("Route 47", 12,60,15,72,33,0) end, function() Mode_MoveToCell("Route 47", 6,0,38,59,33,0) end--[[Between Cliff Cave 2F and Route 48]]}
+DescMaps["Route 47_to_Route 48"] = {function() Mode_MoveToCell("Route 47", 65,72,93,80,68,71) end, function() Mode_MoveToCell("Route 47", 76,81,84,83,68,71) end, function() Mode_MoveToCell("Route 47", 55,74,64,76,68,71) end, function() Mode_MoveToCell("Route 47", 41,72,54,81,68,71) end--[[Between Cliff Cave 1F and Cliff Edge]], function() if isSurfing() then Mode_MoveToCell("Route 47", 19,63,98,95,67,83) end end, function() Mode_MoveToCell("Route 47", 65,84,68,86,67,83) end--[[Water route 47 Downside]], function() Mode_MoveToCell("Route 47", 41,66,70,68,33,0) end, function() Mode_MoveToCell("Route 47", 41,69,41,72,33,0) end, function() Mode_MoveToCell("Route 47", 12,73,41,75,33,0) end, function() Mode_MoveToCell("Route 47", 12,60,15,72,33,0) end, function() Mode_MoveToCell("Route 47", 6,0,38,59,33,0) end--[[Between Cliff Cave 2F and Route 48]]}
 DescMaps["Route 47_to_Cliff Cave B1F"] = {function() Mode_MoveToCell("Route 47", 65,72,93,80,68,71) end, function() Mode_MoveToCell("Route 47", 76,81,84,83,68,71) end, function() Mode_MoveToCell("Route 47", 55,74,64,76,68,71) end, function() Mode_MoveToCell("Route 47", 41,72,54,81,68,71) end--[[Between Cliff Cave 1F and Cliff Edge]], function() if isSurfing() then Mode_MoveToCell("Route 47", 19,63,98,95,67,83) end end, function() Mode_MoveToCell("Route 47", 65,84,68,86,67,83) end--[[Water route 47 Downside]], function() Mode_MoveToCell("Route 47", 41,68,70,68,69,65) end, function() Mode_MoveToCell("Route 47", 41,69,41,72,69,65) end, function() Mode_MoveToCell("Route 47", 12,73,41,75,69,65) end, function() Mode_MoveToCell("Route 47", 12,60,15,72,69,65) end, function() Mode_MoveToCell("Route 47", 6,0,38,59,69,65) end--[[Between Cliff Cave 2F and Route 48]]}
 DescMaps["Cliff Cave 1F_to_Cliff Edge Gate"] = {function() Mode_MoveToCell("Cliff Cave 1F", 12,12,23,17,17,18) end}
 DescMaps["Cliff Cave 1F_to_Cliff Cave B1F"] = {function() Mode_MoveToCell("Cliff Cave 1F", 12,12,23,17,21,15) end}
@@ -417,7 +431,14 @@ DescMaps["Victory Road Hoenn 1F_to_Pokecenter Ever Grande City"] = {function() M
 DescMaps["Victory Road Hoenn B1F_to_Pokemon League Hoenn"] = {function() Mode_MoveToCell("Victory Road Hoenn B1F", 4,4,58,80,46,7) end}
 -- Route 134
 DescMaps["Route 134_to_Route 133"] = {function() Mode_MoveToCell("Route 134", 16,2,55,30,55,2) end, function() Mode_MoveToCell("Route 134", 0,2,15,30,0,6) end}
-
+-- SKY PILLAR --
+DescMaps["Sky Pillar Entrance_to_Sky Pillar 1F"] = {function() Mode_MoveToCell("Sky Pillar Entrance", 13,30,37,48,26,32) end, function() Mode_MoveToCell("Sky Pillar Entrance", 25,7,36,26,27,6) end}
+DescMaps["Sky Pillar Entrance Cave 1F_to_Sky Pillar Entrance"] = {function() Mode_MoveToCell("Sky Pillar Entrance Cave 1F", 5,2,18,16,17,6) end}
+DescMaps["Sky Pillar 3F_to_Sky Pillar 4F"] = {function() Mode_MoveToCell("Sky Pillar 3F", 1,5,14,11,3,6) end}
+DescMaps["Sky Pillar Entrance_to_Route 131"] = {function() Mode_MoveToCell("Sky Pillar Entrance", 25,7,36,26,35,23) end, function() Mode_MoveToCell("Sky Pillar Entrance", 13,30,37,49,26,49) end}
+DescMaps["Sky Pillar Entrance Cave 1F_to_Route 131"] = {function() Mode_MoveToCell("Sky Pillar Entrance Cave 1F", 5,2,18,18,7,17) end}
+-- SAFARI HOENN
+DescMaps["Hoenn Safari Zone Lobby_to_Hoenn Safari Zone Area 1"] = {function() Mode_SpeakWithNPC("Hoenn Safari Zone Lobby","Hello! Welcome to the Hoenn Safari zone!",{1},21,7,21,6) end}
 
 -- SPEAK WITH NPC --
 -- Cable Car Station
@@ -445,7 +466,7 @@ DescMaps["Pokecenter Mauville City_to_Transmat Station"] = {function() Mode_Spea
 DescMaps["Pokecenter Lilycove City_to_Transmat Station"] = {function() Mode_SpeakWithNPC("Pokecenter Lilycove City","Can you present to me your registered",{1},8,5,8,4) end}
 DescMaps["Pokecenter Lavaridge Town_to_Transmat Station"] = {function() Mode_SpeakWithNPC("Pokecenter Lavaridge Town","Can you present to me your registered",{1},8,5,8,4) end}
 DescMaps["Pokecenter Fortree City_to_Transmat Station"] = {function() Mode_SpeakWithNPC("Pokecenter Fortree City","Can you present to me your registered",{1},8,5,8,4) end}
-DescMaps["Pokecenter Fallabor Town_to_Transmat Station"] = {function() Mode_SpeakWithNPC("Pokecenter Fallabor Town","Can you present to me your registered",{1},8,5,8,4) end}
+DescMaps["Pokecenter Fallarbor Town_to_Transmat Station"] = {function() Mode_SpeakWithNPC("Pokecenter Fallarbor Town","Can you present to me your registered",{1},8,5,8,4) end}
 DescMaps["Pokecenter Ever Grande City_to_Transmat Station"] = {function() Mode_SpeakWithNPC("Pokecenter Ever Grande City","Can you present to me your registered",{1},8,5,8,4) end}
 DescMaps["Pokecenter Dewford Town_to_Transmat Station"] = {function() Mode_SpeakWithNPC("Pokecenter Dewford Town","Can you present to me your registered",{1},8,5,8,4) end}
 
@@ -462,7 +483,7 @@ DescMaps["Transmat Station_to_Pokecenter Mauville City"] = {function() Mode_Tran
 DescMaps["Transmat Station_to_Pokecenter Lilycove City"] = {function() Mode_Transmat("Pokecenter Lilycove City", {6,6,2}) end}
 DescMaps["Transmat Station_to_Pokecenter Lavaridge Town"] = {function() Mode_Transmat("Pokecenter Lavaridge Town", {6,4}) end}
 DescMaps["Transmat Station_to_Pokecenter Fortree City"] = {function() Mode_Transmat("Pokecenter Fortree City", {6,6,1}) end}
-DescMaps["Transmat Station_to_Pokecenter Fallabor Town"] = {function() Mode_Transmat("Pokecenter Fallabor Town", {6,3}) end}
+DescMaps["Transmat Station_to_Pokecenter Fallarbor Town"] = {function() Mode_Transmat("Pokecenter Fallarbor Town", {6,3}) end}
 DescMaps["Transmat Station_to_Pokecenter Ever Grande City"] = {function() Mode_Transmat("Pokecenter Ever Grande City", {6,6,6,2}) end}
 DescMaps["Transmat Station_to_Pokecenter Dewford Town"] = {function() Mode_Transmat("Pokecenter Dewford Town", {4}) end}
 

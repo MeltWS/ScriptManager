@@ -15,17 +15,25 @@ HoennMap["Cable Car Station 1"] = {["Cable Car Station 2"] = 1, ["Route 112"] = 
 HoennMap["Cable Car Station 2"] = {["Cable Car Station 1"] = 1, ["Mt. Chimney"] = 1}
 HoennMap["Dewford Town"] = {["Pokecenter Dewford Town"] = 1, ["Route 106"] = 1, ["Route 107"] = 1}
 HoennMap["Ever Grande City"] = {["Pokecenter Ever Grande City"] = 1, ["Pokemon League Hoenn"] = 1, ["Route 128"] = 1, ["Victory Road Hoenn 1F"] = 1}
-HoennMap["Fallabor Town"] = {["Mart Fallabor Town"] = 1, ["Pokecenter Fallabor Town"] = 1, ["Route 113"] = 1, ["Route 114"] = 1}
+HoennMap["Fallarbor Town"] = {["Mart Fallarbor Town"] = 1, ["Pokecenter Fallarbor Town"] = 1, ["Route 113"] = 1, ["Route 114"] = 1}
 HoennMap["Fiery Path"] = {["Route 112"] = 1}
 HoennMap["Fortree City"] = {["Fortree Mart"] = 1, ["Pokecenter Fortree City"] = 1, ["Route 119A"] = 1, ["Route 120"] = 1}
 HoennMap["Fortree Mart"] = {["Fortree City"] = 1}
+HoennMap["Hoenn Safari Zone Lobby"] = {["Hoenn Safari Zone Area 1"] = 1, ["Route 121"] = 1}
+HoennMap["Hoenn Safari Zone Area 1"] = {["Hoenn Safari Zone Lobby"] = 1, ["Hoenn Safari Zone Area 2"] = 1, ["Hoenn Safari Zone Area 4"] = 1, ["Hoenn Safari Zone Area 5"] = 1}
+HoennMap["Hoenn Safari Zone Area 2"] = {["Hoenn Safari Zone Area 1"] = 1}
+HoennMap["Hoenn Safari Zone Area 3"] = {["Hoenn Safari Zone Area 4"] = 1}
+HoennMap["Hoenn Safari Zone Area 4"] = {["Hoenn Safari Zone Area 1"] = 1, ["Hoenn Safari Zone Area 3"] = 1}
+HoennMap["Hoenn Safari Zone Area 5"] = {["Hoenn Safari Zone Area 1"] = 1, ["Hoenn Safari Zone Area 6"] = 1}
+HoennMap["Hoenn Safari Zone Area 6"] = {["Hoenn Safari Zone Area 5"] = 1}
+HoennMap["Route 121"] = {["Lilycove City"] = 1, ["Route 120"] = 1, ["Route 122"] = 1, ["Hoenn Safari Zone Lobby"] = 1}
 HoennMap["Jagged Pass"] = {["Mt. Chimney"] = 1, ["Route 112"] = 1}
 HoennMap["Lavaridge Mart"] = {["Lavaridge Town"] = 1}
 HoennMap["Lavaridge Town"] = {["Lavaridge Mart"] = 1, ["Pokecenter Lavaridge Town"] = 1, ["Route 112"] = 1}
 HoennMap["Lilycove City"] = {["Lilycove City Harbor"] = 1, ["Pokecenter Lilycove City"] = 1, ["Route 121"] = 1, ["Route 124"] = 1}
 HoennMap["Lilycove City Harbor"] = {["Lilycove City"] = 1}
 HoennMap["Littleroot Town"] = {["Route 101"] = 1}
-HoennMap["Mart Fallabor Town"] = {["Fallabor Town"] = 1}
+HoennMap["Mart Fallarbor Town"] = {["Fallarbor Town"] = 1}
 HoennMap["Mart Mauville City"] = {["Mauville City"] = 1}
 HoennMap["Mart Oldale Town"] = {["Oldale Town"] = 1}
 HoennMap["Mart Petalburg City"] = {["Petalburg City"] = 1}
@@ -46,7 +54,7 @@ HoennMap["Petalburg City"] = {["Mart Petalburg City"] = 1, ["Pokecenter Petalbur
 HoennMap["Petalburg Woods"] = {["Route 104"] = 1}
 HoennMap["Pokecenter Dewford Town"] = {["Dewford Town"] = 1, ["Transmat Station"] = 1}
 HoennMap["Pokecenter Ever Grande City"] = {["Ever Grande City"] = 1, ["Transmat Station"] = 1}
-HoennMap["Pokecenter Fallabor Town"] = {["Fallabor Town"] = 1, ["Transmat Station"] = 1}
+HoennMap["Pokecenter Fallarbor Town"] = {["Fallarbor Town"] = 1, ["Transmat Station"] = 1}
 HoennMap["Pokecenter Fortree City"] = {["Fortree City"] = 1, ["Transmat Station"] = 1}
 HoennMap["Pokecenter Lavaridge Town"] = {["Lavaridge Town"] = 1, ["Transmat Station"] = 1}
 HoennMap["Pokecenter Lilycove City"] = {["Lilycove City"] = 1, ["Transmat Station"] = 1}
@@ -74,8 +82,8 @@ HoennMap["Route 111 Desert"] = {["Route 111 North"] = 1, ["Route 111 South"] = 1
 HoennMap["Route 111 North"] = {["Route 111 Desert"] = 1, ["Route 112"] = 1, ["Route 113"] = 1}
 HoennMap["Route 111 South"] = {["Mauville City Stop House 3"] = 1, ["Route 111 Desert"] = 1, ["Route 112"] = 1}
 HoennMap["Route 112"] = {["Cable Car Station 1"] = 2, ["Fiery Path"] = 1, ["Lavaridge Town"] = 3, ["Route 111 North"] = 2, ["Route 111 South"] = 2}
-HoennMap["Route 113"] = {["Fallabor Town"] = 1, ["Route 111 North"] = 1}
-HoennMap["Route 114"] = {["Fallabor Town"] = 1, ["Meteor falls 1F 1R"] = 1}
+HoennMap["Route 113"] = {["Fallarbor Town"] = 1, ["Route 111 North"] = 1}
+HoennMap["Route 114"] = {["Fallarbor Town"] = 1, ["Meteor falls 1F 1R"] = 1}
 HoennMap["Route 115"] = {["Meteor falls 1F 1R"] = 1, ["Rustboro City"] = 1}
 HoennMap["Route 116"] = {["Rustboro City"] = 1, ["Rusturf Tunnel"] = 1}
 HoennMap["Route 117"] = {["Mauville City Stop House 2"] = 1, ["Verdanturf Town"] = 1}
@@ -83,7 +91,7 @@ HoennMap["Route 118"] = {["Mauville City Stop House 4"] = 1, ["Route 119B"] = 1,
 HoennMap["Route 119A"] = {["Fortree City"] = 1, ["Route 119B"] = 1}
 HoennMap["Route 119B"] = {["Route 118"] = 1, ["Route 119A"] = 1}
 HoennMap["Route 120"] = {["Fortree City"] = 1, ["Route 121"] = 1}
-HoennMap["Route 121"] = {["Lilycove City"] = 1, ["Route 120"] = 1, ["Route 122"] = 1}
+HoennMap["Route 121"] = {["Lilycove City"] = 1, ["Route 120"] = 1, ["Route 122"] = 1, ["Hoenn Safari Zone Lobby"] = 1}
 HoennMap["Route 122"] = {["Route 121"] = 1, ["Route 123"] = 1}
 HoennMap["Route 123"] = {["Route 118"] = 1}
 HoennMap["Route 124"] = {["Lilycove City"] = 2, ["Mossdeep City"] = 2, ["Route 126"] = 2}
@@ -100,12 +108,20 @@ HoennMap["Route 133"] = {["Route 132"] = 1, ["Route 134"] = 1}
 HoennMap["Route 134"] = {["Route 133"] = 1, ["Slateport City"] = 1}
 HoennMap["Rustboro City"] = {["Mart Rustboro City"] = 1, ["Pokecenter Rustboro City"] = 1, ["Route 104"] = 1, ["Route 115"] = 1, ["Route 116"] = 1}
 HoennMap["Rusturf Tunnel"] = {["Route 116"] = 1, ["Verdanturf Town"] = 1}
-HoennMap["Sky Pillar Entrance"] = {["Route 131"] = 1}
+HoennMap["Sky Pillar Entrance"] = {["Route 131"] = 1, ["Sky Pillar Entrance Cave 1F"] = 2, ["Sky Pillar 1F"] = 1}
+HoennMap["Sky Pillar Entrance Cave 1F"] = {["Sky Pillar Entrance"] = 2}
+HoennMap["Sky Pillar Entrance"] = {["Route 131"] = 1, ["Sky Pillar Entrance Cave 1F"] = 2, ["Sky Pillar 1F"] = 1}
+HoennMap["Sky Pillar 1F"] = {["Sky Pillar Entrance"] = 1, ["Sky Pillar 2F"] = 1}
+HoennMap["Sky Pillar 2F"] = {["Sky Pillar 1F"] = 1, ["Sky Pillar 3F"] = 1}
+HoennMap["Sky Pillar 3F"] = {["Sky Pillar 2F"] = 1, ["Sky Pillar 4F"] = 1}
+HoennMap["Sky Pillar 4F"] = {["Sky Pillar 3F"] = 1, ["Sky Pillar 5F"] = 1}
+HoennMap["Sky Pillar 5F"] = {["Sky Pillar 4F"] = 1, ["Sky Pillar 6F"] = 1}
+HoennMap["Sky Pillar 6F"] = {["Sky Pillar 5F"] = 1}
 HoennMap["Slateport City"] = {["Mart Slateport"] = 1, ["Pokecenter Slateport"] = 1, ["Route 109"] = 1, ["Route 110"] = 1}
 HoennMap["Sootopolis City"] = {["Pokecenter Sootopolis City"] = 1, ["Sootopolis City Underwater"] = 1, ["Sootopolis Mart"] = 1}
 HoennMap["Sootopolis City Underwater"] = {["Route 126 Underwater"] = 1, ["Sootopolis City"] = 1}
 HoennMap["Sootopolis Mart"] = {["Sootopolis City"] = 1}
-HoennMap["Transmat Station"] = {["Pokecenter Verdanturf"] = H_SUBWAY, ["Pokecenter Sootopolis City"] = H_SUBWAY, ["Pokecenter Slateport"] = H_SUBWAY, ["Pokecenter Rustboro City"] = H_SUBWAY, ["Pokecenter Petalburg City"] = H_SUBWAY, ["Pokecenter Pacifidlog Town"] = H_SUBWAY, ["Pokecenter Oldale Town"] = H_SUBWAY, ["Pokecenter Mossdeep City"] = H_SUBWAY, ["Pokecenter Mauville City"] = H_SUBWAY, ["Pokecenter Lilycove City"] = H_SUBWAY, ["Pokecenter Lavaridge Town"] = H_SUBWAY, ["Pokecenter Fortree City"] = H_SUBWAY, ["Pokecenter Fallabor Town"] = H_SUBWAY, ["Pokecenter Ever Grande City"] = H_SUBWAY, ["Pokecenter Dewford Town"] = H_SUBWAY}
+HoennMap["Transmat Station"] = {["Pokecenter Verdanturf"] = H_SUBWAY, ["Pokecenter Sootopolis City"] = H_SUBWAY, ["Pokecenter Slateport"] = H_SUBWAY, ["Pokecenter Rustboro City"] = H_SUBWAY, ["Pokecenter Petalburg City"] = H_SUBWAY, ["Pokecenter Pacifidlog Town"] = H_SUBWAY, ["Pokecenter Oldale Town"] = H_SUBWAY, ["Pokecenter Mossdeep City"] = H_SUBWAY, ["Pokecenter Mauville City"] = H_SUBWAY, ["Pokecenter Lilycove City"] = H_SUBWAY, ["Pokecenter Lavaridge Town"] = H_SUBWAY, ["Pokecenter Fortree City"] = H_SUBWAY, ["Pokecenter Fallarbor Town"] = H_SUBWAY, ["Pokecenter Ever Grande City"] = H_SUBWAY, ["Pokecenter Dewford Town"] = H_SUBWAY}
 HoennMap["Verdanturf Mart"] = {["Verdanturf Town"] = 1}
 HoennMap["Verdanturf Town"] = {["Pokecenter Verdanturf"] = 1, ["Route 117"] = 1, ["Rusturf Tunnel"] = 1, ["Verdanturf Mart"] = 1}
 HoennMap["Victory Road Hoenn 1F"] = {["Ever Grande City"] = 1, ["Victory Road Hoenn B1F"] = 1}
