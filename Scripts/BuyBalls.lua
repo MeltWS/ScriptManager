@@ -27,7 +27,7 @@ function BuyBalls:isDoable()
 end
 
 function BuyBalls:isDone()
-    return toBuy <= 0
+    return toBuy <= 0 or getMoney() < 9000
 end
 
 function BuyBalls:onStart()

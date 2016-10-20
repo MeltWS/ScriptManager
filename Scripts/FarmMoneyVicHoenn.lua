@@ -5,6 +5,7 @@ local description = [[Money Farm Victory Road Hoenn]]
 
 local pf           = require "ProshinePathfinder/Pathfinder/Maps_Pathfind" -- requesting table with methods
 local ScriptBase   = require "Lib/ScriptBase"
+local Game         = require "Lib/Game"
 local farmMap      = "Victory Road Hoenn 1F"
 local holdItem     = "Leftovers" -- support giving an item to the leader, if you don't want to give one, set to nil.
 local farmMethod   = function() return moveToRectangle(4,37,22,41) end
@@ -31,19 +32,9 @@ local function useAnyMove()
     return false
 end
 
-local function hasUsableDamageMove(pokemonID)
-    for i = 1, 4 do
-        local moveName = getPokemonMoveName(pokemonID, i)
-        if moveName ~= "False Swipe" and getPokemonMovePower(pokemonID, i) > 0 and getRemainingPowerPoints(pokemonID, moveName) > 0 then
-            return true
-        end
-    end
-    return false
-end
-
 local function swapLeaderWithUsablePokemon()
     for i = 2, getTeamSize(), 1 do
-        if getPokemonHealth(i) > 0 and hasUsableDamageMove(i) then
+        if getPokemonHealth(i) > 0 and Game.hasUsableDamageMove(i) then
             if not getPokemonHeldItem(1) then
                 return assert(swapPokemon(1, i), "Failed to swap Pokemon ".. i .."  with leader.")
             else return assert(takeItemFromPokemon(1), "Failed to retrieve item from leader")
@@ -64,7 +55,7 @@ local function giveLeaderItem()
 end
 
 function FarmMoneyVicHoenn:onPathAction()
-    if getPokemonHealth(1) == 0 or not hasUsableDamageMove(1) then
+    if getPokemonHealth(1) == 0 or not Game.hasUsableDamageMove(1) then
         if not swapLeaderWithUsablePokemon() then
             return pf.UseNearestPokecenter()
         end
